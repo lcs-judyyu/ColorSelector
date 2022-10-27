@@ -11,6 +11,7 @@
 		2264C9EE290AD7F900C52ADB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264C9ED290AD7F900C52ADB /* ContentView.swift */; };
 		2264C9F0290AD7FB00C52ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2264C9EF290AD7FB00C52ADB /* Assets.xcassets */; };
 		2264C9F3290AD7FB00C52ADB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2264C9F2290AD7FB00C52ADB /* Preview Assets.xcassets */; };
+		2264C9FC290AE49900C52ADB /* SavedPalettes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264C9FB290AE49900C52ADB /* SavedPalettes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2264C9ED290AD7F900C52ADB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2264C9EF290AD7FB00C52ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2264C9F2290AD7FB00C52ADB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2264C9FB290AE49900C52ADB /* SavedPalettes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPalettes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,8 @@
 			children = (
 				2264C9EB290AD7F900C52ADB /* ColorSelectorApp.swift */,
 				2264C9ED290AD7F900C52ADB /* ContentView.swift */,
+				2264C9F9290AE44C00C52ADB /* Model */,
+				2264C9FA290AE46700C52ADB /* Views */,
 				2264C9EF290AD7FB00C52ADB /* Assets.xcassets */,
 				2264C9F1290AD7FB00C52ADB /* Preview Content */,
 			);
@@ -65,6 +69,21 @@
 				2264C9F2290AD7FB00C52ADB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2264C9F9290AE44C00C52ADB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2264C9FB290AE49900C52ADB /* SavedPalettes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2264C9FA290AE46700C52ADB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +158,7 @@
 			files = (
 				2264C9EE290AD7F900C52ADB /* ContentView.swift in Sources */,
 				2264C9EC290AD7F900C52ADB /* ColorSelectorApp.swift in Sources */,
+				2264C9FC290AE49900C52ADB /* SavedPalettes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
