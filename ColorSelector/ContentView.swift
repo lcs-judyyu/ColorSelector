@@ -25,28 +25,82 @@ struct ContentView: View {
         return Color(hue: hue, saturation: 0.8, brightness: 0.9)
     }
     
+    private var darkerColour: Color {
+        return Color(hue: hue, saturation: 0.8, brightness: 0.6)
+    }
+    
+    private var darkestColour: Color {
+        return Color(hue: hue, saturation: 0.8, brightness: 0.3)
+    }
     
     
     //Interface
     var body: some View {
         VStack {
-            VStack {
+            
+            HStack {
+                VStack {
+                    
+                }
+                .frame(width: 100, height: 100)
+                .background(baseColour)
+                .padding(.trailing)
+                
+                VStack(alignment: .leading) {
+                    
+                    Text("Hue")
+                        .bold()
+                    
+                    Text("\(selectedHue.formatted(.number.precision(.fractionLength(1))))°")
+                    
+                    Slider(value: $selectedHue,
+                           in: 0...360,
+                           label: { Text("Hue") },
+                           minimumValueLabel: { Text("0") },
+                           maximumValueLabel: { Text("360") })
+                    
+                }
+                
+                Spacer()
                 
             }
-            .frame(width: 200, height: 200)
-            .background(baseColour)
-            
-            Text("\(hue)")
-                .bold()
-            
-            Text("\(selectedHue.formatted(.number.precision(.fractionLength(1))))°")
             
             
-            Slider(value: $selectedHue,
-                   in: 0...360,
-                   label: { Text("Hue") },
-                   minimumValueLabel: { Text("0") },
-                   maximumValueLabel: { Text("360") })
+            HStack {
+                
+                Text("Monochromatic").foregroundColor(Color.gray)
+                
+                Spacer()
+                
+            }
+            .padding(.top)
+            
+            HStack (spacing: 0) {
+                
+                VStack {
+                    
+                }
+                .frame(width: 60, height: 60)
+                .background(baseColour)
+                
+                VStack {
+                    
+                }
+                .frame(width: 60, height: 60)
+                .background(darkerColour)
+                
+                VStack {
+                    
+                }
+                .frame(width: 60, height: 60)
+                .background(darkestColour)
+                
+                Spacer()
+                
+                Text("Save")
+                
+            }
+            
             
             Spacer()
         }
