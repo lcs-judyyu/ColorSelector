@@ -10,10 +10,24 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            VStack {
+                
+            }
+            .frame(width: 200, height: 200)
+            .background(Color.blue)
+            
+            Text("Hue")
+                .bold()
+            
+            Text("210.7°")
+            
+            Slider(value: Binding.constant(210.7),
+                   in: 0...360,
+                   label: { Text("Hue") },
+                   minimumValueLabel: { Text("0") },
+                   maximumValueLabel: { Text("360") })
+            
+            Spacer()
         }
         .padding()
     }
