@@ -12,6 +12,7 @@
 		2264C9F0290AD7FB00C52ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2264C9EF290AD7FB00C52ADB /* Assets.xcassets */; };
 		2264C9F3290AD7FB00C52ADB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2264C9F2290AD7FB00C52ADB /* Preview Assets.xcassets */; };
 		2264C9FC290AE49900C52ADB /* SavedPalettes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264C9FB290AE49900C52ADB /* SavedPalettes.swift */; };
+		2264C9FF290AE7BA00C52ADB /* MonochromaticPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264C9FE290AE7BA00C52ADB /* MonochromaticPaletteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		2264C9EF290AD7FB00C52ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2264C9F2290AD7FB00C52ADB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2264C9FB290AE49900C52ADB /* SavedPalettes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPalettes.swift; sourceTree = "<group>"; };
+		2264C9FE290AE7BA00C52ADB /* MonochromaticPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonochromaticPaletteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				2264C9EB290AD7F900C52ADB /* ColorSelectorApp.swift */,
-				2264C9ED290AD7F900C52ADB /* ContentView.swift */,
 				2264C9F9290AE44C00C52ADB /* Model */,
 				2264C9FA290AE46700C52ADB /* Views */,
 				2264C9EF290AD7FB00C52ADB /* Assets.xcassets */,
@@ -82,8 +83,18 @@
 		2264C9FA290AE46700C52ADB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2264C9ED290AD7F900C52ADB /* ContentView.swift */,
+				2264C9FD290AE78900C52ADB /* Helpers */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2264C9FD290AE78900C52ADB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2264C9FE290AE7BA00C52ADB /* MonochromaticPaletteView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +169,7 @@
 			files = (
 				2264C9EE290AD7F900C52ADB /* ContentView.swift in Sources */,
 				2264C9EC290AD7F900C52ADB /* ColorSelectorApp.swift in Sources */,
+				2264C9FF290AE7BA00C52ADB /* MonochromaticPaletteView.swift in Sources */,
 				2264C9FC290AE49900C52ADB /* SavedPalettes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

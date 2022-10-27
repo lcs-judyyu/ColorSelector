@@ -16,7 +16,6 @@ struct ContentView: View {
     @State private var savedPalettes: [SavedPalette] = []
     
     //MARK: Computed Properties
-    
     //The selected hue expressed as a value between 0 and 1.0
     private var hue: Double {
         return selectedHue / 360.0
@@ -25,14 +24,6 @@ struct ContentView: View {
     //Make the colour that SwiftUI will Use to set the background of the colour swatch
     private var baseColour: Color {
         return Color(hue: hue, saturation: 0.8, brightness: 0.9)
-    }
-    
-    private var darkerColour: Color {
-        return Color(hue: hue, saturation: 0.8, brightness: 0.6)
-    }
-    
-    private var darkestColour: Color {
-        return Color(hue: hue, saturation: 0.8, brightness: 0.3)
     }
     
     
@@ -79,23 +70,7 @@ struct ContentView: View {
             
             HStack (spacing: 0) {
                 
-                VStack {
-                    
-                }
-                .frame(width: 60, height: 60)
-                .background(baseColour)
-                
-                VStack {
-                    
-                }
-                .frame(width: 60, height: 60)
-                .background(darkerColour)
-                
-                VStack {
-                    
-                }
-                .frame(width: 60, height: 60)
-                .background(darkestColour)
+                MonochromaticPaletteView(selectedHue: hue * 360)
                 
                 Spacer()
                 
@@ -109,9 +84,15 @@ struct ContentView: View {
                 }, label: {
                     Text("Save")
                 })
-                
             }
             
+            
+            //Show the saved palettes
+            List(savedPalettes){ currentPalette in
+                
+                MonochromaticPaletteView(selectedHue: currentPalette.hue * 360)
+                
+            }
             
             Spacer()
         }
