@@ -13,7 +13,8 @@ struct ContentView: View {
     @State private var selectedHue = 0.0
     
     // Tracks the list of saved palettes
-    @State private var savedPalettes: [SavedPalette] = []
+    // Derived value
+    @Binding var savedPalettes: [SavedPalette]
     
     //MARK: Computed Properties
     //The selected hue expressed as a value between 0 and 1.0
@@ -79,6 +80,8 @@ struct ContentView: View {
                 }, label: {
                     Text("Save")
                 })
+                .buttonStyle(.bordered)
+                
             }
             
             
@@ -96,7 +99,21 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        ContentView()
+        LiveContentView()
     }
+    
+    // create a view to simulate the app level entry point -> ContentView connection
+    struct LiveContentView: View {
+        
+        // populate some palettes to start
+        @State var palettes: [SavedPalette] = examplePalettes
+        
+        var body: some View {
+            ContentView(savedPalettes: $palettes)
+        }
+        
+    }
+    
 }
