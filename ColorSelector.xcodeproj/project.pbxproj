@@ -14,6 +14,7 @@
 		2264C9FC290AE49900C52ADB /* SavedPalettes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264C9FB290AE49900C52ADB /* SavedPalettes.swift */; };
 		2264C9FF290AE7BA00C52ADB /* MonochromaticPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264C9FE290AE7BA00C52ADB /* MonochromaticPaletteView.swift */; };
 		2264CA01290B729900C52ADB /* ColorSwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264CA00290B729900C52ADB /* ColorSwatchView.swift */; };
+		2264CA03290C5A5F00C52ADB /* SavedPalettesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264CA02290C5A5F00C52ADB /* SavedPalettesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2264C9FB290AE49900C52ADB /* SavedPalettes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPalettes.swift; sourceTree = "<group>"; };
 		2264C9FE290AE7BA00C52ADB /* MonochromaticPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonochromaticPaletteView.swift; sourceTree = "<group>"; };
 		2264CA00290B729900C52ADB /* ColorSwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatchView.swift; sourceTree = "<group>"; };
+		2264CA02290C5A5F00C52ADB /* SavedPalettesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPalettesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				2264C9ED290AD7F900C52ADB /* ContentView.swift */,
+				2264CA02290C5A5F00C52ADB /* SavedPalettesView.swift */,
 				2264C9FD290AE78900C52ADB /* Helpers */,
 			);
 			path = Views;
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2264CA03290C5A5F00C52ADB /* SavedPalettesView.swift in Sources */,
 				2264C9EE290AD7F900C52ADB /* ContentView.swift in Sources */,
 				2264C9EC290AD7F900C52ADB /* ColorSelectorApp.swift in Sources */,
 				2264CA01290B729900C52ADB /* ColorSwatchView.swift in Sources */,

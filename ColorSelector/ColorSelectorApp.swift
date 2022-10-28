@@ -21,7 +21,22 @@ struct ColorSelectorApp: App {
     // Windows
     var body: some Scene {
         WindowGroup {
-            ContentView(savedPalettes: $savedPalettes)
+            TabView {
+                ContentView(savedPalettes: $savedPalettes)
+                    .tabItem {
+                        Image(systemName: "swatchpalette")
+                        Text("Browse")
+                    }
+                
+                SavedPalettesView(savedPalettes: $savedPalettes)
+                    .tabItem {
+                        Image(systemName: "list.dash")
+                        Text("Review")
+                    }
+                    
+            }
+            
+            
         }
     }
 }
