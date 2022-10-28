@@ -32,12 +32,7 @@ struct ContentView: View {
         VStack {
             
             HStack {
-                VStack {
-                    
-                }
-                .frame(width: 100, height: 100)
-                .background(baseColour)
-                .padding(.trailing)
+                ColorSwatchView(color: baseColour, size: 100)
                 
                 VStack(alignment: .leading) {
                     
