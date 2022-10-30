@@ -12,10 +12,6 @@ struct ContentView: View {
     //MARK: Stored Properties
     @State private var selectedHue = 0.0
     
-    // Tracks the list of saved palettes
-    // Derived value
-    @Binding var savedPalettes: [SavedPalette]
-    
     //MARK: Computed Properties
     //The selected hue expressed as a value between 0 and 1.0
     private var hue: Double {
@@ -27,6 +23,9 @@ struct ContentView: View {
         return Color(hue: hue, saturation: 0.8, brightness: 0.9)
     }
     
+    // Tracks the list of saved palettes
+    // Derived value
+    @Binding var savedPalettes: [SavedPalette]
     
     //Interface
     var body: some View {
