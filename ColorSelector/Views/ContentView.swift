@@ -71,11 +71,8 @@ struct ContentView: View {
                 Spacer()
                 
                 Button(action: {
-                    // Create a new palette instance
-                    let newPalette = SavedPalette(hue: hue)
                     
-                    // Add it to the list
-                    savedPalettes.append(newPalette)
+                    savePalette()
                     
                 }, label: {
                     Text("Save")
@@ -96,6 +93,15 @@ struct ContentView: View {
         }
         .padding()
     }
+    //MARK: Functions
+    func savePalette() {
+        // Create a new palette instance
+        let newPalette = SavedPalette(hue: hue)
+        
+        // Add it to the list
+        savedPalettes.append(newPalette)
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

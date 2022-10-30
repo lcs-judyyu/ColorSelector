@@ -54,8 +54,18 @@ struct SavedPalettesView: View {
                 
             }
             
+            // Show the reset button
+            HStack {
+                Spacer()
+                Button(action: {
+                    print("Resetting")
+                }, label: {
+                    Text("Reset")
+                })
+            }
+            
             //Show the saved palettes
-            List(savedPalettes){ currentPalette in
+            List(filtered(by: hue, from: savedPalettes)){ currentPalette in
                 
                 MonochromaticPaletteView(selectedHue: currentPalette.hue * 360)
                 
@@ -65,6 +75,8 @@ struct SavedPalettesView: View {
         }
         .padding()
     }
+
+    
 }
 
 struct SavedPalettesView_Previews: PreviewProvider {

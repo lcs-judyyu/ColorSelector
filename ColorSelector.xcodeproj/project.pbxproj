@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225E99DE290F298900AB8480 /* SharedFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225E99DD290F298900AB8480 /* SharedFunctions.swift */; };
 		2264C9EC290AD7F900C52ADB /* ColorSelectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264C9EB290AD7F900C52ADB /* ColorSelectorApp.swift */; };
 		2264C9EE290AD7F900C52ADB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264C9ED290AD7F900C52ADB /* ContentView.swift */; };
 		2264C9F0290AD7FB00C52ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2264C9EF290AD7FB00C52ADB /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		225E99DD290F298900AB8480 /* SharedFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctions.swift; sourceTree = "<group>"; };
 		2264C9E8290AD7F900C52ADB /* ColorSelector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorSelector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2264C9EB290AD7F900C52ADB /* ColorSelectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectorApp.swift; sourceTree = "<group>"; };
 		2264C9ED290AD7F900C52ADB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		225E99DB290F296800AB8480 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				225E99DD290F298900AB8480 /* SharedFunctions.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
 		2264C9DF290AD7F900C52ADB = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				2264C9EB290AD7F900C52ADB /* ColorSelectorApp.swift */,
+				225E99DB290F296800AB8480 /* Functions */,
 				2264C9F9290AE44C00C52ADB /* Model */,
 				2264C9FA290AE46700C52ADB /* Views */,
 				2264C9EF290AD7FB00C52ADB /* Assets.xcassets */,
@@ -178,6 +189,7 @@
 				2264C9EC290AD7F900C52ADB /* ColorSelectorApp.swift in Sources */,
 				2264CA01290B729900C52ADB /* ColorSwatchView.swift in Sources */,
 				2264C9FF290AE7BA00C52ADB /* MonochromaticPaletteView.swift in Sources */,
+				225E99DE290F298900AB8480 /* SharedFunctions.swift in Sources */,
 				2264C9FC290AE49900C52ADB /* SavedPalettes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
