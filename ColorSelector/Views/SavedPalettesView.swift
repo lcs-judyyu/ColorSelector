@@ -16,6 +16,9 @@ struct SavedPalettesView: View {
     // Derived value
     @Binding var savedPalettes: [SavedPalette]
     
+    // whether a hue has been selected or not
+    @State private var selectionMade = false
+    
     //MARK: Computed Properties
     //The selected hue expressed as a value between 0 and 1.0
     private var hue: Double {
@@ -59,13 +62,15 @@ struct SavedPalettesView: View {
                 Spacer()
                 Button(action: {
                     print("Resetting")
+                    selectedHue = 0.0
+                    selectionMade = false
                 }, label: {
                     Text("Reset")
                 })
             }
             
             //Show the saved palettes
-            List(filtered(by: hue, from: savedPalettes)){ currentPalette in
+            List(filtered(by: hue, from: savedPalettes, selectionActive: selectionMade)){ currentPalette in
                 
                 MonochromaticPaletteView(selectedHue: currentPalette.hue * 360)
                 
@@ -74,6 +79,14 @@ struct SavedPalettesView: View {
             Spacer()
         }
         .padding()
+        .onChange(of: selectedHue) { newValue in
+            
+            // The user has selected a hue
+            if newValue > 0 {
+                selectionMade = true
+            }
+            
+        }
     }
 
     
